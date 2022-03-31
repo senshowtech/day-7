@@ -1,0 +1,65 @@
+body {
+  margin: 0px;
+  background-color: whitesmoke !important;
+}
+
+/* Container */
+.jumbotron-1 {
+  height: 93vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron-1 section {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  width: 85%;
+}
+section .section-kiri {
+  padding: 50px;
+  flex: 60%;
+}
+section .section-kanan {
+  padding: 40px;
+  flex: 40%;
+}
+/* jumbotron-1 */
+
+/* Button */
+.button-contact {
+  margin-top: 40px;
+}
+.button {
+  margin-right: 20px;
+  background-color: black;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 30px;
+  text-align: center;
+  font-size: 12px;
+}
+.button-group {
+  margin-top: 40px;
+}
+.button-item-group {
+  background-color: black;
+  margin-left: 12px;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+/* Button */
+
+.card-image-jumbotron {
+  padding-bottom: 10px;
+  text-align: center;
+  width: 75%;
+  box-shadow: 0px 24px 12px whitesmoke;
+}
+.image {
+  border-radius: 5px;
+}

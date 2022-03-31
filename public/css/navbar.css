@@ -1,0 +1,7 @@
+.btn-navbar {
+  background-color: black !important;
+  color: aliceblue !important;
+}
+.active {
+  font-weight: bold;
+}

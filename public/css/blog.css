@@ -1,0 +1,114 @@
+.blog {
+  width: 1200px;
+  margin: 50px auto;
+}
+.text-project {
+  text-align: center;
+}
+.box-blog {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 120px;
+  justify-content: start;
+}
+.box-blog1 {
+  background-color: white;
+  width: 320px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(232, 235, 235);
+}
+.image-blog {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
+.box {
+  display: flex;
+  justify-content: end;
+}
+.box-date {
+  display: flex;
+}
+.box-date1 {
+  flex: 50%;
+}
+.box-date2 {
+  flex: 50%;
+  margin-left: 10px;
+}
+.box-check {
+  display: flex;
+}
+.box-check1 {
+  flex: 50%;
+}
+.box-check2 {
+  flex: 50%;
+}
+.checkboxtext {
+  font-size: 110%;
+  display: inline;
+}
+input[type="checkbox"] {
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  padding: 5px;
+}
+.input-blog-image-group {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #f4f3f3;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.input-blog-image-group label p {
+  font-size: 15px;
+}
+.input-blog-image-group label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-size {
+  margin-left: 5px;
+  font-size: 20px;
+}
+.button-group-parent {
+  display: flex;
+  margin-top: 10px;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+.button-child {
+  flex: 50%;
+}
+.button-edit {
+  background-color: black;
+  color: white !important;
+  border-radius: 5px;
+  padding: 8px 45px;
+  margin-left: 18px;
+  border: none;
+  cursor: pointer;
+}
+.button-delete {
+  background-color: black;
+  color: white !important;
+  border-radius: 5px;
+  padding: 8px 40px;
+  cursor: pointer;
+  border: none;
+}

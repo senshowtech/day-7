@@ -1,0 +1,38 @@
+.input {
+  background-color: rgb(232, 235, 235);
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(209, 207, 207);
+}
+.input-email {
+  background-color: rgb(232, 235, 235);
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(209, 207, 207);
+  height: 100px;
+}
+.text-center {
+  text-align: center;
+}
+.label {
+  font-weight: bold;
+  font-size: 20px;
+}
+.button {
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.form {
+  width: 500px;
+  margin: 50px auto;
+}

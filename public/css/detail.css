@@ -1,0 +1,31 @@
+.text-center {
+  text-align: center;
+}
+.box {
+  display: flex;
+  width: 1200px;
+  margin: 50px auto;
+}
+.box-layout {
+  flex: 50%;
+}
+.box-layout1 {
+  flex: 50%;
+  margin-left: 20px;
+}
+.image {
+  width: 100%;
+}
+.item2 {
+  margin-top: 20px;
+}
+.text-tech {
+  display: flex;
+}
+.text-tech1 {
+  flex: 50%;
+}
+.text-blog {
+  width: 1200px;
+  margin: 50px auto;
+}

@@ -17,6 +17,8 @@ exports.blogArray = (req, res) => {
   let data = {
     project: req.body.inputproject,
     description: req.body.inputdescription,
+    start_date: req.body.inputstartdate,
+    end_date: req.body.inputenddate,
     date: getDate(req.body.inputstartdate, req.body.inputenddate),
     date_moth: dateMonth(req.body.inputstartdate, req.body.inputenddate),
     nodejs: req.body.nodejs,
@@ -72,6 +74,8 @@ exports.blogEdit = (req, res) => {
         ...value,
         project: req.body.inputproject,
         description: req.body.inputdescription,
+        start_date: req.body.inputstartdate,
+        end_date: req.body.inputenddate,
         date: getDate(req.body.inputstartdate, req.body.inputenddate),
         date_moth: dateMonth(req.body.inputstartdate, req.body.inputenddate),
         nodejs: req.body.nodejs,

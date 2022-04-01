@@ -8,7 +8,7 @@ const {
   blogDelete,
   blogEdit,
   blogEditdetail,
-} = require("../controller/array.js");
+} = require("../controller/blog.js");
 
 router.get("/", blogData);
 router.get("/add-project", blogCreateproject);

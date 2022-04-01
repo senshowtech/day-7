@@ -1,5 +1,5 @@
-const { getDate, dateMonth } = require("../controller/waktu.js");
-const { checkboxLogic } = require("../controller/checkbox.js");
+const { getDate, dateMonth } = require("./waktu.js");
+const { checkboxLogic } = require("./checkbox.js");
 
 exports.blogs = [
   {

@@ -41,7 +41,7 @@ exports.blogCreateproject = (req, res) => {
 
 exports.blogDetail = (req, res) => {
   let index = req.params.id;
-  let dataBlogs = this.blogs.map(function (item) {
+  let dataBlogs = this.blogs.map((item) => {
     return {
       ...item,
       index: index,
@@ -63,7 +63,7 @@ exports.blogEditdetail = (req, res) => {
   let python = this.blogs[index].python;
   let reactjs = this.blogs[index].reactjs;
   checkboxLogic(nodejs, vuejs, python, reactjs);
-  let dataBlogs = this.blogs.map(function (item) {
+  let dataBlogs = this.blogs.map((item) => {
     return {
       ...item,
       index: index,

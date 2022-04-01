@@ -13,7 +13,7 @@ exports.blogs = [
   },
 ];
 
-exports.blogArray = (req, res) => {
+exports.blogAdd = (req, res) => {
   let data = {
     project: req.body.inputproject,
     description: req.body.inputdescription,
@@ -49,6 +49,12 @@ exports.blogDetail = (req, res) => {
   return res.render("detail", dataBlogs[index]);
 };
 
+exports.blogDelete = (req, res) => {
+  let index = req.params.id;
+  this.blogs.splice(index, 1);
+  res.redirect("/");
+};
+
 exports.blogEditdetail = (req, res) => {
   let index = req.params.id;
   let dataBlogs = this.blogs.map(function (item) {
@@ -58,12 +64,6 @@ exports.blogEditdetail = (req, res) => {
     };
   });
   return res.render("edit-project", dataBlogs[index]);
-};
-
-exports.blogDelete = (req, res) => {
-  let index = req.params.id;
-  this.blogs.splice(index, 1);
-  res.redirect("/");
 };
 
 exports.blogEdit = (req, res) => {

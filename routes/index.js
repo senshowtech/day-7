@@ -16,6 +16,6 @@ router.get("/detail-project/:id", blogDetail);
 router.get("/edit-project/:id", blogEditdetail);
 router.get("/delete-project/:id", blogDelete);
 router.post("/create-project", blogAdd);
-router.post("/edit-project/:id", blogEdit);
+router.post("/edit-project", blogEdit);
 
 module.exports = router;

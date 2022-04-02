@@ -82,6 +82,7 @@ exports.blogEditdetail = (req, res) => {
 };
 
 exports.blogEdit = (req, res) => {
+  // let id = req.body.id
   let id = req.params.id;
   const updatedArray = this.blogs.map((value, index) => {
     if (index == id) {

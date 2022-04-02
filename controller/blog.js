@@ -71,7 +71,7 @@ exports.blogEditdetail = (req, res) => {
   let dataBlogs = this.blogs.map((item) => {
     return {
       ...item,
-      index: index,
+      // index: index,
       nodejs_html: nodejs,
       vuejs_html: vuejs,
       python_html: python,
@@ -82,7 +82,7 @@ exports.blogEditdetail = (req, res) => {
 };
 
 exports.blogEdit = (req, res) => {
-  let id = req.body.id;
+  let id = req.params.id;
   const updatedArray = this.blogs.map((value, index) => {
     if (index == id) {
       return {

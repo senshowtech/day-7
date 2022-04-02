@@ -1,5 +1,5 @@
 const { getDate, dateMonth } = require("./waktu.js");
-const { checkboxLogic } = require("./checkbox.js");
+const { checkboxLogic, checkboxDetail } = require("./checkbox.js");
 
 exports.blogs = [
   {
@@ -41,12 +41,18 @@ exports.blogCreateproject = (req, res) => {
 
 exports.blogDetail = (req, res) => {
   let index = req.params.id;
+  let nodejs = this.blogs[index].nodejs;
+  let vuejs = this.blogs[index].vuejs;
+  let python = this.blogs[index].python;
+  let reactjs = this.blogs[index].reactjs;
   let dataBlogs = this.blogs.map((item) => {
     return {
       ...item,
       index: index,
+      icon: checkboxDetail(nodejs, vuejs, python, reactjs),
     };
   });
+  // console.log(dataBlogs[index]);
   return res.render("detail", dataBlogs[index]);
 };
 

@@ -20,3 +20,20 @@ exports.checkboxLogic = (nodejs, vuejs, python, reactjs) => {
     reactjs = false;
   }
 };
+
+exports.checkboxDetail = (nodejs, vuejs, python, reactjs) => {
+  let bersebrangan = false;
+  if (reactjs != null && python != null && vuejs == null && nodejs == null) {
+    bersebrangan = true;
+  } else if (
+    nodejs != null &&
+    vuejs != null &&
+    reactjs == null &&
+    python == null
+  ) {
+    bersebrangan = true;
+  } else {
+    bersebrangan = false;
+  }
+  return bersebrangan;
+};

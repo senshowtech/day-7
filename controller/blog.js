@@ -52,7 +52,6 @@ exports.blogDetail = (req, res) => {
       icon: checkboxDetail(nodejs, vuejs, python, reactjs),
     };
   });
-  // console.log(dataBlogs[index]);
   return res.render("detail", dataBlogs[index]);
 };
 

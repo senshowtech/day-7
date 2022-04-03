@@ -14,6 +14,14 @@ exports.blogs = [
   },
 ];
 
+exports.blogData = (req, res) => {
+  return res.render("index", { list: this.blogs });
+};
+
+exports.blogCreateproject = (req, res) => {
+  return res.render("create-project");
+};
+
 exports.blogAdd = (req, res) => {
   let data = {
     project: req.body.inputproject,
@@ -31,14 +39,6 @@ exports.blogAdd = (req, res) => {
   res.redirect("/");
 };
 
-exports.blogData = (req, res) => {
-  return res.render("index", { list: this.blogs });
-};
-
-exports.blogCreateproject = (req, res) => {
-  return res.render("create-project");
-};
-
 exports.blogDetail = (req, res) => {
   let index = req.params.id;
   let nodejs = this.blogs[index].nodejs;
@@ -53,12 +53,6 @@ exports.blogDetail = (req, res) => {
     };
   });
   return res.render("detail", dataBlogs[index]);
-};
-
-exports.blogDelete = (req, res) => {
-  let index = req.params.id;
-  this.blogs.splice(index, 1);
-  res.redirect("/");
 };
 
 exports.blogEditdetail = (req, res) => {
@@ -104,5 +98,11 @@ exports.blogEdit = (req, res) => {
   });
   this.blogs.splice(id, 1);
   this.blogs.splice(id, 1, updatedArray[id]);
+  res.redirect("/");
+};
+
+exports.blogDelete = (req, res) => {
+  let index = req.params.id;
+  this.blogs.splice(index, 1);
   res.redirect("/");
 };

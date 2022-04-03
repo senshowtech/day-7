@@ -17,7 +17,7 @@ let blogs = [
 let isLogin = true;
 
 exports.blogData = (req, res) => {
-  let dataBlogs = blogs.map(function (item) {
+  let dataBlogs = blogs.map((item) => {
     return {
       ...item,
       isLogin: isLogin,

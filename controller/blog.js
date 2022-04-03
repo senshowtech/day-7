@@ -49,6 +49,7 @@ exports.blogDetail = (req, res) => {
     return {
       ...item,
       index: index,
+      // ubah template jika bersebrangan
       icon: checkboxDetail(nodejs, vuejs, python, reactjs),
     };
   });
@@ -61,6 +62,7 @@ exports.blogEditdetail = (req, res) => {
   let vuejs = this.blogs[index].vuejs;
   let python = this.blogs[index].python;
   let reactjs = this.blogs[index].reactjs;
+  // untuk ubah nilai yang di checklist dan tidak
   checkboxLogic(nodejs, vuejs, python, reactjs);
   let dataBlogs = this.blogs.map((item) => {
     return {

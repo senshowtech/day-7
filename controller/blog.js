@@ -1,7 +1,7 @@
 const { getDate, dateMonth } = require("./waktu.js");
 const { checkboxLogic, checkboxDetail } = require("./checkbox.js");
 
-exports.blogs = [
+let blogs = [
   {
     project: "data 1",
     description: "data 1",
@@ -14,12 +14,24 @@ exports.blogs = [
   },
 ];
 
+let isLogin = true;
+
 exports.blogData = (req, res) => {
-  return res.render("index", { list: this.blogs });
+  let dataBlogs = blogs.map(function (item) {
+    return {
+      ...item,
+      isLogin: isLogin,
+    };
+  });
+  return res.render("index", { isLogin, list: dataBlogs });
 };
 
 exports.blogCreateproject = (req, res) => {
   return res.render("create-project");
+};
+
+exports.blogContact = (req, res) => {
+  return res.render("contact");
 };
 
 exports.blogAdd = (req, res) => {
@@ -35,17 +47,17 @@ exports.blogAdd = (req, res) => {
     python: req.body.python,
     reactjs: req.body.reactjs,
   };
-  this.blogs.push(data);
+  blogs.push(data);
   res.redirect("/");
 };
 
 exports.blogDetail = (req, res) => {
   let index = req.params.id;
-  let nodejs = this.blogs[index].nodejs;
-  let vuejs = this.blogs[index].vuejs;
-  let python = this.blogs[index].python;
-  let reactjs = this.blogs[index].reactjs;
-  let dataBlogs = this.blogs.map((item) => {
+  let nodejs = blogs[index].nodejs;
+  let vuejs = blogs[index].vuejs;
+  let python = blogs[index].python;
+  let reactjs = blogs[index].reactjs;
+  let dataBlogs = blogs.map((item) => {
     return {
       ...item,
       index: index,
@@ -58,13 +70,13 @@ exports.blogDetail = (req, res) => {
 
 exports.blogEditdetail = (req, res) => {
   let index = req.params.id;
-  let nodejs = this.blogs[index].nodejs;
-  let vuejs = this.blogs[index].vuejs;
-  let python = this.blogs[index].python;
-  let reactjs = this.blogs[index].reactjs;
+  let nodejs = blogs[index].nodejs;
+  let vuejs = blogs[index].vuejs;
+  let python = blogs[index].python;
+  let reactjs = blogs[index].reactjs;
   // untuk ubah nilai yang di checklist dan tidak
   checkboxLogic(nodejs, vuejs, python, reactjs);
-  let dataBlogs = this.blogs.map((item) => {
+  let dataBlogs = blogs.map((item) => {
     return {
       ...item,
       index: index,
@@ -79,7 +91,7 @@ exports.blogEditdetail = (req, res) => {
 
 exports.blogEdit = (req, res) => {
   let id = req.body.id;
-  const updatedArray = this.blogs.map((value, index) => {
+  const updatedArray = blogs.map((value, index) => {
     if (index == id) {
       return {
         ...value,
@@ -98,13 +110,13 @@ exports.blogEdit = (req, res) => {
       return value;
     }
   });
-  this.blogs.splice(id, 1);
-  this.blogs.splice(id, 1, updatedArray[id]);
+  blogs.splice(id, 1);
+  blogs.splice(id, 1, updatedArray[id]);
   res.redirect("/");
 };
 
 exports.blogDelete = (req, res) => {
   let index = req.params.id;
-  this.blogs.splice(index, 1);
+  blogs.splice(index, 1);
   res.redirect("/");
 };

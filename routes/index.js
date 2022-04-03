@@ -8,9 +8,11 @@ const {
   blogDelete,
   blogEdit,
   blogEditdetail,
+  blogContact,
 } = require("../controller/blog.js");
 
 router.get("/", blogData);
+router.get("/contact", blogContact);
 router.get("/add-project", blogCreateproject);
 router.get("/detail-project/:id", blogDetail);
 router.get("/edit-project/:id", blogEditdetail);
